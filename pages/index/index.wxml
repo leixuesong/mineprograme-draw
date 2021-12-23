@@ -1,0 +1,4 @@
+<my-turntable-draw canvaswidth="{{boxData.width}}" canvasheight="{{boxData.height}}" colors="{{['#243068','#ffffff']}}" prizelist="{{prizeList}}"
+bind:befoterClick='befoterClick'
+id="draw"
+bind:afterClick='afterClick'></my-turntable-draw>

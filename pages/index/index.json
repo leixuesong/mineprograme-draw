@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText":"圆形转盘",
+  "usingComponents": {
+    "my-turntable-draw": "/components/draw/draw"
+  }
+}

@@ -1,0 +1,20 @@
+<view class="raffle-wheel" style="width: {{canvaswidth + 44 + 'px'}}; height: {{canvasheight + 44 + 'px'}}">
+  <view class="raffle-wheel-box" style="width: {{canvaswidth + 'px'}}; height: {{canvasheight + 'px'}}">
+    <view class="raffle-wheel-show" style="transform: rotate({{ rotates + 'deg'}});transition-duration: 8s;">
+      <view class="item-block" wx:for="{{prizelist}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+        <view class="item-view-block" style="transform: rotate({{(degs * index) + 'deg'}}) skewY({{skew + 'deg'}});background: {{((index % 2) > 0 ? color1 : color2)}}">
+        </view>
+        <view class="item-view" style="transform: translateX(-50%) rotate({{(degs * index + (degs / 2)) + 'deg'}});width: {{textWidth}};">
+          <view class="item-text">{{item.name}}</view>
+          <image src="{{item.image}}" mode="aspectFill" class="item-image"></image>
+        </view>
+      </view>
+    </view>
+    <view class="raffle-wheel__action" bindtap="handleAction">
+      <view class="button-text">
+        <view>开始</view>
+        <view>抽奖</view>
+      </view>
+    </view>
+  </view>
+</view>
